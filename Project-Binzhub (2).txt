@@ -18,7 +18,7 @@ local function makeBubble(uiObject, radius, strokeColor)
 	corner.CornerRadius = UDim.new(0, radius or 8)
 	corner.Parent = uiObject
 	local stroke = Instance.new("UIStroke")
-	stroke.Color = strokeColor or Color3.fromRGB(255, 0, 80)
+	stroke.Color = strokeColor or Color3.fromRGB(255,209,220)
 	stroke.Thickness = 2
 	stroke.Transparency = 0.3
 	stroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
@@ -42,8 +42,8 @@ IconButton.Size = UDim2.new(0,26,0,26)
 IconButton.Text = "B"
 IconButton.TextScaled = true
 IconButton.Font = Enum.Font.GothamBlack
-IconButton.TextColor3 = Color3.fromRGB(255,180,180)
-makeBubble(IconButton,18,Color3.fromRGB(255,0,80))
+IconButton.TextColor3 = Color3.fromRGB(255,209,220)
+makeBubble(IconButton,18,Color3.fromRGB(255,209,220))
 
 local iconGradient = Instance.new("UIGradient")
 iconGradient.Color = ColorSequence.new{
@@ -94,7 +94,7 @@ MainFrame.Position = UDim2.new(0.32,0,0.3,0)
 MainFrame.Active = true
 MainFrame.Draggable = true
 MainFrame.BackgroundColor3 = Color3.fromRGB(20,0,0)
-makeBubble(MainFrame,14,Color3.fromRGB(255,0,80))
+makeBubble(MainFrame,14,Color3.fromRGB(255,209,220))
  
 local uiScale = Instance.new("UIScale")
 uiScale.Scale = 0.7
@@ -126,7 +126,7 @@ TitleText.BackgroundTransparency = 1
 TitleText.Font = Enum.Font.GothamBold
 TitleText.Text = "👹•Welcome to BinzzHub!"
 TitleText.TextSize = 22
-TitleText.TextColor3 = Color3.fromRGB(255,100,100) -- light red
+TitleText.TextColor3 = Color3.fromRGB(255,209,220) -- light red
 TitleText.TextXAlignment = Enum.TextXAlignment.Left
 TitleText.TextYAlignment = Enum.TextYAlignment.Top
  
@@ -154,7 +154,7 @@ CloseBtn.Size = UDim2.new(0,24,0,24)
 CloseBtn.Position = UDim2.new(1,-28,0,3)
 CloseBtn.BackgroundColor3 = Color3.fromRGB(180,0,60)
 CloseBtn.TextColor3 = Color3.fromRGB(255,255,255)
-makeBubble(CloseBtn,6,Color3.fromRGB(255,60,90))
+makeBubble(CloseBtn,6,Color3.fromRGB(255,209,220))
 
 local MinimizeBtn = Instance.new("TextButton")
 MinimizeBtn.Parent = MainFrame
@@ -165,7 +165,7 @@ MinimizeBtn.Size = UDim2.new(0,24,0,24)
 MinimizeBtn.Position = UDim2.new(1,-56,0,3)
 MinimizeBtn.BackgroundColor3 = Color3.fromRGB(120,0,30)
 MinimizeBtn.TextColor3 = Color3.fromRGB(255,255,255)
-makeBubble(MinimizeBtn,6,Color3.fromRGB(255,0,80))
+makeBubble(MinimizeBtn,6,Color3.fromRGB(255,209,220))
 
 -----------------------------------------------------
 -- LEFT SIDE TABS
@@ -174,7 +174,7 @@ local SideTabs = Instance.new("Frame")
 SideTabs.Parent = MainFrame
 SideTabs.BackgroundColor3 = Color3.fromRGB(40,0,0)
 SideTabs.Size = UDim2.new(0,110,1,0)
-makeBubble(SideTabs,10,Color3.fromRGB(255,0,80))
+makeBubble(SideTabs,10,Color3.fromRGB(255,209,220))
 
 local SideList = Instance.new("UIListLayout", SideTabs)
 SideList.Padding = UDim.new(0,4)
@@ -189,13 +189,13 @@ local tabs = {}
 local function createTab(name)
 	local btn = Instance.new("TextButton")
 	btn.Size = UDim2.new(0.9,0,0,30)
-	btn.BackgroundColor3 = Color3.fromRGB(80,0,0)
+	btn.BackgroundColor3 = Color3.fromRGB(255,209,220)
 	btn.TextColor3 = Color3.fromRGB(255,255,255)
 	btn.Font = Enum.Font.GothamBold
 	btn.TextSize = 14
 	btn.Text = name
 	btn.Parent = SideTabs
-	makeBubble(btn,6,Color3.fromRGB(255,0,80))
+	makeBubble(btn,6,Color3.fromRGB(255,209,220)
 	table.insert(tabs, btn)
 	return btn
 end
@@ -203,9 +203,9 @@ end
 local currentTab
 local function selectTab(btn)
 	for _,b in ipairs(tabs) do
-		b.BackgroundColor3 = Color3.fromRGB(80,0,0)
+		b.BackgroundColor3 = Color3.fromRGB(255,209,220)
 	end
-	btn.BackgroundColor3 = Color3.fromRGB(180,0,60)
+	btn.BackgroundColor3 = Color3.fromRGB(255,209,220)
 	currentTab = btn
 end
 
@@ -234,7 +234,7 @@ local function createDropdown(title, posY, highZ, parentPanel)
 	frame.Position = UDim2.new(0,8,0,posY)
 	frame.BackgroundColor3 = Color3.fromRGB(60,0,0)
 	frame.ZIndex = highZ
-	makeBubble(frame,6,Color3.fromRGB(255,0,80))
+	makeBubble(frame,6,Color3.fromRGB(255,209,220))
 	frame.Parent = parentPanel
 
 	local btn = Instance.new("TextButton", frame)
@@ -321,7 +321,7 @@ local samplePets = {"Pet A","Pet B","Pet C","Pet D","Pet E","Pet F","Pet G","Pet
 for _,p in ipairs(samplePets) do
 	local petBtn = Instance.new("TextButton")
 	petBtn.Size = UDim2.new(1,-10,0,24)
-	petBtn.BackgroundColor3 = Color3.fromRGB(120,0,0)
+	petBtn.BackgroundColor3 = Color3.fromRGB(255,209,220)
 	petBtn.TextColor3 = Color3.fromRGB(255,255,255)
 	petBtn.Font = Enum.Font.GothamBold
 	petBtn.TextSize = 13
